@@ -1,29 +1,46 @@
-# Stack Implementation Using `LifoQueue` (Max Size 7) 🔄
+### EX: 10.2 IMPLEMENTATION OF STACK
+### Aim: To Write a python program to implement the stack using deque method for rotating the stack.
+### Algorithm:
 
-This Python program demonstrates a stack implemented using the `LifoQueue` class from the `queue` module. It allows up to 7 elements, checks if the stack is full, and then prints the elements in reverse (LIFO) order.
+STEP 1: Start.
 
-## 🎯 Aim
+STEP 2: Import collections and import deque.
 
-To create a Python program that:
-- Implements a stack using `LifoQueue` with a maximum size of 7
-- Adds user-inputted values to the stack
-- Checks whether the stack is full
-- Prints the stack elements in reverse order (LIFO)
+STEP 3: Create a list and get the input from user.
 
-## 📋 Algorithm
+STEP 4: Create a variable n and get number of inputs from user.
 
-1. Import the `LifoQueue` class from the `queue` module.
-2. Create a stack with a maximum size of 7.
-3. Read the number of elements (`n`) to be added to the stack.
-4. Loop `n` times:
-   - Read a value from the user.
-   - Use `put()` to push it onto the stack if it's not full.
-5. Use `full()` to check if the stack is full and print the result.
-6. Use `get()` repeatedly to pop and print elements in reverse order.
+STEP 5 : Using a loop get the inputs from user and append in deque.
 
-## Program
-Add Code Here
+STEP 6: Using rotate function rotate the stack.
 
-## 🧪 Sample Input and Output
+STEP 7 : Print the result. 
 
-## Result:
+STEP 8 : Stop.
+### Program: 
+
+```
+reg no:212223070004
+name:dhushanth.km
+from collections import deque
+
+stack = deque()
+
+n = int(input("Enter number of elements to push into the stack: "))
+for _ in range(n):
+    val = input("Enter value: ")
+    stack.append(val)
+
+print("Original Stack:", list(stack))
+
+k = int(input("Enter rotation value (positive = right, negative = left): "))
+stack.rotate(k)
+
+print("Stack after rotation:", list(stack))
+
+```
+### Output:
+
+![image](https://github.com/user-attachments/assets/e6fcaef4-4b5c-45b5-a015-b6bcdb9aeb99)
+
+### Result: Thus, the given program is implemented and executed successfully .
